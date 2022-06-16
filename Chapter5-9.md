@@ -1,4 +1,4 @@
-# Math expressions: Familiar operators
+# 5.Math expressions: Familiar operators
 
 Examples:
 
@@ -19,7 +19,7 @@ Examples:
 -% is the modulus operator.It gives you the remainder when the division is executed.
 
 
-# Math expressions: Unfamiliar operators
+# 6.Math expressions: Unfamiliar operators
 
 num++;
 
@@ -27,7 +27,7 @@ This is a short way of writing...
 
 num = num + 1;
 
-# Math expressions: Eliminating ambiguity
+# 7.Math expressions: Eliminating ambiguity
 
 var totalCost = 1 + 3 * 4;
 
@@ -42,7 +42,7 @@ Example:
 
 3.var resultOfComputation = (2 * 4) * 4 + 2;
 
-# Concatenating text strings
+# 8.Concatenating text strings
 
 alert("Thanks, " + userName + "!");
 
@@ -74,7 +74,7 @@ var customMess = message + userName + banger;
 
 alert(customMess);
 
-# Prompts
+# 9.Prompts
 
 A prompt box asks the user for some information and provides a response field for her
 answer.

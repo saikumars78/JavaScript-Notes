@@ -12,13 +12,10 @@ A variable is created when you write var (for variable) followed by the name.
 
 Ex:
 1.var name = "Mark";
-
 2.var nationality;
-
   nationality = "U.S.";
   
 3.var thanx = "Thanks for your input!"
-
   alert(thanx);
 
 # Variables for Numbers:
@@ -26,9 +23,12 @@ Ex:
 A string isn't the only thing you can assign to a variable. You can also assign a number.
 
 Ex:
+
 1.var weight = 150;
+
 2.var originalNum = 23;
   var newNum = originalNum + 7;
+  
 3.var originalNum = "23";
   var newNum = originalNum + 7;
  -JavaScript can't sum a string and a number. JavaScript interprets

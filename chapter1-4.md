@@ -1,12 +1,15 @@
 # Alerts
 
 An alert is a box that pops up to give the user a message.
+
 Ex:alert("Are You Sure??");
 
 # Variables for Strings 
 
 Variable is a word that refers to a particular value.
+
 A variable is created when you write var (for variable) followed by the name.
+
 Ex:
 1.var name = "Mark";
 2.var nationality;
@@ -17,6 +20,7 @@ Ex:
 # Variables for Numbers:
 
 A string isn't the only thing you can assign to a variable. You can also assign a number.
+
 Ex:
 1.var weight = 150;
 2.var originalNum = 23;
@@ -29,10 +33,13 @@ Ex:
 # Variable Names Legal and Illegal:
 
 -A variable name can't contain any spaces.
+
 -A variable name can contain only letters, numbers, dollar signs, and underscores.
+
 -Variable names are case sensitive.
--adopt the camelCase convention. It'll make your variable names more readable, and you'll be less
- likely to get variable names mixed up.
+
+-adopt the camelCase convention. It'll make your variable names more readable, and you'll be less likely to get variable names mixed up.
+
 -Make your variable names descriptive.
 
 

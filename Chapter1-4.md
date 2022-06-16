@@ -1,11 +1,11 @@
-# Alerts
+# 1.Alerts
 
 An alert is a box that pops up to give the user a message.
 
 Example:
 alert("Are You Sure??");
 
-# Variables for Strings 
+# 2.Variables for Strings 
 
 Variable is a word that refers to a particular value.
 
@@ -23,7 +23,7 @@ Example:
 
   alert(thanx);
 
-# Variables for Numbers:
+# 3.Variables for Numbers:
 
 A string isn't the only thing you can assign to a variable. You can also assign a number.
 
@@ -43,7 +43,7 @@ Example:
  -JavaScript can't sum a string and a number. JavaScript interprets
   "23" as a word, not a number.
 
-# Variable Names Legal and Illegal:
+# 4.Variable Names Legal and Illegal:
 
 -A variable name can't contain any spaces.
 

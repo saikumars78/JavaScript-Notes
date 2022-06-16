@@ -2,7 +2,8 @@
 
 An alert is a box that pops up to give the user a message.
 
-Ex:alert("Are You Sure??");
+Example:
+alert("Are You Sure??");
 
 # Variables for Strings 
 
@@ -10,7 +11,7 @@ Variable is a word that refers to a particular value.
 
 A variable is created when you write var (for variable) followed by the name.
 
-Ex:
+Example:
 
 1.var name = "Mark";
 
@@ -26,7 +27,7 @@ Ex:
 
 A string isn't the only thing you can assign to a variable. You can also assign a number.
 
-Ex:
+Example:
 
 1.var weight = 150;
 

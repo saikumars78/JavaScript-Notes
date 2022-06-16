@@ -14,7 +14,7 @@ Ex:
 3.var thanx = "Thanks for your input!"
   alert(thanx);
 
-#Variables for Numbers:
+# Variables for Numbers:
 
 A string isn't the only thing you can assign to a variable. You can also assign a number.
 Ex:
@@ -26,7 +26,7 @@ Ex:
  -JavaScript can't sum a string and a number. JavaScript interprets
   "23" as a word, not a number.
 
-#Variable Names Legal and Illegal:
+# Variable Names Legal and Illegal:
 
 -A variable name can't contain any spaces.
 -A variable name can contain only letters, numbers, dollar signs, and underscores.

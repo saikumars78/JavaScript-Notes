@@ -12,9 +12,13 @@ A variable is created when you write var (for variable) followed by the name.
 
 Ex:
 1.var name = "Mark";
+
 2.var nationality;
+
   nationality = "U.S.";
+  
 3.var thanx = "Thanks for your input!"
+
   alert(thanx);
 
 # Variables for Numbers:
@@ -38,7 +42,7 @@ Ex:
 
 -Variable names are case sensitive.
 
--adopt the camelCase convention. It'll make your variable names more readable, and you'll be less likely to get variable names mixed up.
+-Adopt the camelCase convention. It'll make your variable names more readable, and you'll be less likely to get variable names mixed up.
 
 -Make your variable names descriptive.
 

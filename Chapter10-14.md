@@ -135,13 +135,23 @@ There's another way to code this, using nesting.
 3 g = h;
 
 4 }
+
 5 else if (a === b) {
+
 6 g = h;
+
 7 }
+
 8 else {
+
 9 e = f;
+
 10 }
+
 11 }
+
 12 else {
+
 13 e = f;
+
 14 }

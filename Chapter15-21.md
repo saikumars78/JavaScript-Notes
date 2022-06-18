@@ -22,13 +22,13 @@ and _ are legal. The first character can't be a number. No spaces.
 
 Adding and removing elements
 
-pop, you can remove the last element of an array.
-
-pets.pop();
-
 push, you can add one or more elements to the end of an array.
 
 pets.push("fish", "ferret");
+
+pop, you can remove the last element of an array.
+
+pets.pop();
 
 # 17 Arrays: Removing, inserting,and extracting elements
 
@@ -40,8 +40,9 @@ To add one or more elements to the beginning of an array, use the unshift method
 
 pets.unshift("fish", "ferret");
 
-the splice method to insert one or more elements anywhere in an array, while
-optionally removing one or more elements that come after it.Now we can limit the number of loops to the count that JavaScript comes up with.
+splice method is used to perform insert,update and delete operation,and return a deleted element.
+
+slice method slices out a piece of an array into a new array(creates new array).
 
 1 var numElements = cleanestCities.length;
 

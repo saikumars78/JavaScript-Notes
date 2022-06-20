@@ -115,9 +115,17 @@ Now we can limit the number of loops to the count that JavaScript comes up with.
 
 # 21 changing case
 
-toLowerCase
+Javascript has two methods to change a string to lowercase and uppercase, called toLowerCase() and toUpperCase(), respectively.
 
-toUpperCase
+The toLowerCase()
+
+The toLowerCase() is a built-in method that returns the calling string value converted to lowercase.
+
+The toUpperCase()
+
+The toUpperCase() is a built-in method that returns the calling string value converted to uppercase.
+
+Example:
 
 1 var cityToCheck = prompt("Enter your city");
 

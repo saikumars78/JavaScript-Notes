@@ -69,7 +69,7 @@ A Notes made from this book : Smarter Way to Learn JavaScript - Mark Myers
 64. The DOM: Counting elements
 65. The DOM: Attributes
 66. The DOM: Attribute names and values
-67. 67. The DOM: Adding nodes
+67. The DOM: Adding nodes
 68. The DOM: Inserting nodes
 69. Objects
 70. Objects: Properties

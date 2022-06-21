@@ -43,7 +43,7 @@ A Notes made from this book : Smarter Way to Learn JavaScript - Mark Myers
 38. Functions: local vs. global variables
 39. switch statements: how to start them
 40. switch statements: how to complete them
-41. 41. while loops
+41. while loops
 42. do...while loops
 43. Placing scripts
 44. Commenting

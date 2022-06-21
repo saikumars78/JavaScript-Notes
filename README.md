@@ -20,7 +20,7 @@ A Notes made from this book : Smarter Way to Learn JavaScript - Mark Myers
 15. Arrays
 16. Arrays: adding and removing elements
 17. Arrays: removing, inserting, and extracting elements
-18. 18. for loops
+18. for loops
 19. for loops: flags, Booleans, array length, and breaks
 20. for loops nested
 21. Changing case

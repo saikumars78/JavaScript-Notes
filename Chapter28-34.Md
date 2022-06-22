@@ -53,5 +53,136 @@ var prettyTotal = total.toFixed();
 
 # 31 Getting the current date and time
 
+var rightNow = new Date(); //creates something called a Date object.
+
+var dateString = rightNow.toString();
+
+Below example extracts the day of the week, and assigns the day of the week to the variable theDay.
+
+1 var rightNow = new Date();
+
+2 var theDay = rightNow.getDay();
+
+Example:
+
+1 var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+2 var now = new Date();
+
+3 var theDay = now.getDay();
+
+4 var nameOfToday = dayNames[theDay];
+
+Here's what's going on:
+
+1. Creates an array of days starting with "Sun" and assigns it to dayNames.
+
+2. Creates a new Date object and assigns it to now.
+
+3. Extracts the day of the week as aa number and assigns it to theDay.
+
+4. Uses the day number as an index to specify the correct array element, i.e. the day name.
+
+# 32 Extracting parts of the date and time
+
+1 var d = new Date();
+
+2 var currentMonth = d.getMonth();
+
+getDate gives you a number for the day of the month.
+
+var dayOfMonth = d.getDate();
+
+getFullYear gives you a 4-digit number for the year.
+
+var currYr = d.getFullYear();
+
+getHours gives you a number from 0 through 23 corresponding to midnight through 11 p.m.
+
+var currentHrs = d.getHours();
+
+getMinutes gives you a number from 0 through 59.
+
+var currMins = d.getMinutes();
+
+getSeconds gives you a number from 0 through 59.
+
+var currSecs = d.getSeconds()
+
+getMilliseconds gives you a number from 0 through 999.
+
+var currMills = d.getMilliseconds();
+
+getTime gives you the number of milliseconds that have elapsed since midnight, Jan. 1,1970.
+
+var millsSince = d.getTime();
+
+# 33 Specifying a date and time
+
+1 var today = new Date();
+
+2 var doomsday = new Date("June 30, 2035");
+
+3 var msToday = today.getTime();
+
+4 var msDoomsday = doomsday.getTime();
+
+5 var msDiff = msDoomsday - msToday;
+
+6 var dDiff = msDiff / (1000 * 60 * 60 * 24);
+
+7 dDiff = Math.floor(dDiff);
+
+or
+
+1 var msDiff = new Date("June 30, 2035").getTime() - new Date().getTime();
+
+2 var daysTillDoom = Mathfloor(msDiff / (1000 * 60 * 60 * 24));
+
+# 34 Changing elements of a date and time
+
+setFullYear sets the year of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setFullYear(2001);
+
+setMonth sets the month of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setMonth(11);
+
+setDate sets the day of the month of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setDate(15);
+
+setHours sets the hours of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setHours(13);
+
+setMinutes sets the minutes of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setMinutes(05);
+
+setSeconds sets the seconds of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setSeconds(55);
+
+setMilliseconds sets the milliseconds of an existing Date object without changing any other element.
+
+1 var d = new Date();
+
+2 d.setMilliseconds(867);
+
+
  
                    

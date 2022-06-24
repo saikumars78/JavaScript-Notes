@@ -5,18 +5,22 @@ The first, getElementById, gives you access only to those components that have b
 Document Object Model,The DOM is an organization chart, created automatically by the browser when your web page loads, for the whole web page. All the
 things on your web page—the tags, the text blocks, the images, the links, the tables, the style attributes, and more—have spots on this organization chart. 
 
-1st level: document<br>
-2nd level: < html ><br>
-3rd level: < head ><br>
-4th level: <title><br>
-5th level: Simple document<br></title><br>
-< /head ><br>
-3rd level < body ><br>
-4th level < p ><br>5th level There's not much to this.<br>
-</p><br>
-</body><br> 
-</html>
-
+```HTMl
+1st level: document
+2nd level: <html>
+3rd level: <head>
+4th level: <title>
+5th level: Simple document
+           </title>
+           </head>
+3rd level <body><br>
+4th level <p>
+5th level There's not much to this
+         </p>
+         </body
+         </html>
+```
+      
       Document
           |
          html

@@ -25,8 +25,7 @@ num = num + 1;
 ```
 var totalCost = 1 + 3 * 4;
 ```
-In JavaScript as in algebra, the ambiguity is cleared up by precedence rules. As in
-algebra, the rule that applies here.(The result: 13)
+In JavaScript as in algebra, the ambiguity is cleared up by precedence rules. As in algebra, the rule that applies here.(The result: 13)
 
 Example:
 ```

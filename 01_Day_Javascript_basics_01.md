@@ -1,47 +1,37 @@
 # 1.Alerts
 
-An alert is a box that pops up to give the user a message.
-
-Example:
+An alert is a box that pops up to give the user a message.<br>Example:
+```
 alert("Are You Sure??");
+```
 
 # 2.Variables for Strings 
 
-Variable is a word that refers to a particular value.
+Variable is a word that refers to a particular value.<br>
+A variable is created when you write var (for variable) followed by the name.<br>
 
-A variable is created when you write var (for variable) followed by the name.
-
-Example:
-
-1.var name = "Mark";
-
+Example:<br>
+```js
+1.var name = "Mark
 2.var nationality;
-
-  nationality = "U.S.";
-  
+  nationality = "U.S."; 
 3.var thanx = "Thanks for your input!"
-
   alert(thanx);
+```
 
 # 3.Variables for Numbers:
 
-A string isn't the only thing you can assign to a variable. You can also assign a number.
-
+A string isn't the only thing you can assign to a variable. You can also assign a number.<br>
 Example:
-
+```
 1.var weight = 150;
-
 2.var originalNum = 23;
-
   var newNum = originalNum + 7;
-  
 3.var originalNum = "23";
-
   var newNum = originalNum + 7;
+```
   
-  
- -JavaScript can't sum a string and a number. JavaScript interprets
-  "23" as a word, not a number.
+ -JavaScript can't sum a string and a number. JavaScript interprets "23" as a word, not a number.
 
 # 4.Variable Names Legal and Illegal:
 

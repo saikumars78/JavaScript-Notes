@@ -37,26 +37,26 @@ the html node, the head and body nodes, the title node,
 one paragraph node, and two text nodes.
 
 # 59 The DOM:Parents and children
+```
+1st level: document 
+2nd level: <html> 
+3rd level: <head>
+4th level: <title>
+5th level: Simple document
+           </title>
+           </head>
+3rd level <body>
+4th level <div>
+5th level <p>
+6th level There's not much to this.</p>  
+5th level <p>  
+6th level Nor to this.</p>
+          </div>  
+          </body>
+          </html>
+```
 
-1st level: document <br>
-2nd level: < html > <br>
-3rd level: < head ><br>
-4th level: < title ><br> 
-5th level: Simple document<br>
-</title><br></head><br>3rd level <body><br>
-4th level <div><br>  
-5th level <p><br>  
-6th level There's not much to this.<br>  
-</p><br>  
-5th level <p><br>  
-6th level Nor to this.<br>  
-</p>
-<br> 
-</div><br>  
-</body>
-<br> 
-</html>
-
+```
          document
             |
        _____|______
@@ -66,78 +66,70 @@ one paragraph node, and two text nodes.
     title         div
       |            |
    simple doc      |
+                ___|____________
+               |                |
+  There's not much to this   Nor to this
                   
+```
 
+```
 <p>This is <em>important</em>!</p>
-
-If you made a chart for this paragraph, you might think that all the text is a child of the <p>
-node. But remember, every node that is enclosed by another node is the child of the node that
-encloses it. Since the text node "important" is enclosed by the element node <em>, this
-particular text node is the child of <em>, not <p>.
+```
+If you made a chart for this paragraph, you might think that all the text is a child of the < p > node.But remember, every node that is enclosed by another node is the child of the node that encloses it. Since the text node "important" is enclosed by the element node < em >, this particular text node is the child of < em >, not < p >.
 
 # 60 The DOM: Finding children
-
+```
 var eField = document.getElementById("email");
-
+```
 The statement above targets the element with the id of "email".
-
+```
 var eField = document.getElementsByTagName("p");
-<br>var eField = document.getElementsByTagName("p");
-
+var eField = document.getElementsByTagName("p");
+```
 Having made a collection of paragraphs, you can target any paragraph within the collection.
-
+```
 var contents = p[2].innerHTML;
-
+```
 The statement above assigns the text string contained within the third paragraph of the document to the variable contents.
-
+```
 <body>
-
 <div id="cal">
-
 <p>Southern Cal is sunny.</p>
-
 <p>Northern Cal is rainy.</p>
-
 <p>Eastern Cal is desert.</p>
-
-  </div>
-
-<div id="ny">
-
-<p>Urban NY is crowded.</p>
-
-<p>Rural NY is sparse.</p>
-
 </div>
-
+<div id="ny">
+<p>Urban NY is crowded.</p>
+<p>Rural NY is sparse.</p>
+</div>
 </body>
-
+```
 If you wanted to read the contents of the last paragraph in the markup, you could write...
-
+```
 1 var p = document.getElementsByTagName("p");
-
 2 var contents = p[4].innerHTML;
-
+```
 # 61 The DOM: Junk artifacts and nodeType
-
+```
 1st level: document<br>
-2nd level: < html ><br>
-3rd level: < head ><br>
-4th level: < title ><br><br>
-5th level: Simple document<br>
-< /title ><br>
-< /head ><br>
-3rd level < body ><br>
-4th level < div ><br>5th level < p ><br>
-6th level There's not much to this.<br>
-< /p ><br>
-5th level < p ><br>
-6th level Nor to this.
-<br>< /p >
-<br></div><br>
-</body><br>
-</html>
-
+2nd level: <html><br>
+3rd level: <head>
+4th level: <title>
+5th level: Simple document
+           </title>
+           </head>
+3rd level  <body>
+4th level  <div>
+5th level  <p>
+6th level  There's not much to this.
+           </p>
+5th level  <p>
+6th level  Nor to this.
+           </p>
+           </div>
+           </body>
+           </html>
+```
 These extra text nodes create noise that makes it hard for your DOM-reading code to find
 the signal. In one browser, the first child of the body node might be a div. In another browser,
 the first child of the body might be an empty text node.

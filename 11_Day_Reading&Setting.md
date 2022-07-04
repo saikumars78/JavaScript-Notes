@@ -19,7 +19,7 @@ Email:
 <input type="submit" value="Submit">
 </form>
 ```
-Next, I'm going to add an event-handler, using the keyword onSubmit.
+Next,add an event-handler, using the keyword onSubmit.
 ```
 <form onSubmit="checkAddress('email');">
 Email:

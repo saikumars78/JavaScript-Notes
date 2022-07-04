@@ -1,6 +1,6 @@
 # 58 The DOM
 
-The first, getElementById, gives you access only to those components that have been assigned an id. The second, getElementsByTagName, is good for wholesale changes, but is a bit cumbersome for fine surgical work.
+The first, getElementById, gives you access only to those components that have been assigned an id.<br>The second, getElementsByTagName, is good for wholesale changes, but is a bit cumbersome for fine surgical work.
 
 Document Object Model,The DOM is an organization chart, created automatically by the browser when your web page loads, for the whole web page. All the
 things on your web page—the tags, the text blocks, the images, the links, the tables, the style attributes, and more—have spots on this organization chart. 
@@ -137,21 +137,29 @@ the first child of the body might be an empty text node.
 There are a number of solutions. As one approach, the Mozilla Developer Network
 suggests a workaround that's almost comically desperate but does solve the problem without
 any extra effort from JavaScript. You format the markup like this.
-<br>
-Here's the markup, with the text <br>
-< div id="humpty"><br>< p >All the king's horses.</p><br>< p >All the dude's crew.</p><br>< p >All the town's orthopedists.</p><br>< /div ><br>
-This is the code.<br>
-1 var d = document.getElementById("humpty");<br>
-2 var pCounter = 0;<br>
-3 for (var i = 0; i < d.childNodes.length; i++) {<br>
-4 if (d.childNodes[i].nodeType === 1 ) {<br>
-5 pCounter++;<br> 
-6 }<br>
-7 if (pCounter === 2) {<br>
+
+Here's the markup, with the text 
+```
+<div id="humpty">
+<p>All the king's horses.</p>
+<p>All the dude's crew.</p>
+<p>All the town's orthopedists.
+</p>
+</div>
+
+This is the code.
+1 var d = document.getElementById("humpty");
+2 var pCounter = 0;
+3 for (var i = 0; i < d.childNodes.length; i++) {
+4 if (d.childNodes[i].nodeType === 1 ) {
+5 pCounter++; 
+6 }
+7 if (pCounter === 2) {
 8 d.childNodes[i].innerHTML = "All his men.";<br>
 9 break;<br>
-10 }<br>
-11 }<br>
+10 }
+11 }
+```
 Here's the breakdown:<br>
 1 Assigns the div to the variable d<br>
 2 Counts the number of paragraphs<br>

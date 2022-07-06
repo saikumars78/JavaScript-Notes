@@ -56,34 +56,41 @@ To change the value of an object's number value, use a simple assignment stateme
 deal3.cost = 79.95;
 ```
 You can also assign an array list to a property.
+```
 deal3.features = ["Guarantee", "Free Ship"];
-Whatever the value of deal3.features was, now it's an array with the elements
-"Guarantee" and "Free Ship."
+```
+Whatever the value of deal3.features was, now it's an array with the elements "Guarantee" and "Free Ship."
 You can also assign a Boolean value.
+```
 deal3.membersOnly = false;
+```
 
-you can create an undefined variable by not assigning it a value, you can create an
-object without any properties.
+you can create an undefined variable by not assigning it a value, you can create an object without any properties.
+```
 var deal4 = {};
-If you want to create a property now and assign it a value later, you can create it with a
-value of undefined.
+```
+If you want to create a property now and assign it a value later, you can create it with a value of undefined.
+```
 deal3.market = undefined;
+```
 You can delete a property of an object.
+```
 delete deal3.market;
+```
 You can check to see if a property of an object exists. The following statement tests
 whether there is such a thing as deal3.market and assigns the result (true or false) to the
 variable propertyExists.
+```
 propertyExists = "market" in deal3;
+```
 Things to notice:
 You could use any legal variable name instead of propertyExists.
 The keyword in asks, "The property market is in the object deal3—true or false?"
 The property market is in quotes.
 The object deal3 is not in quotes.
 
-71
-Objects:
-Methods
-
+# 71 Objects: Methods
+```
 1 var plan1 = {
 2 name: "Basic",
 3 price: 3.99,
@@ -104,19 +111,20 @@ Methods
 18 return bestPrice * 12;
 19 }
 20 };
-Things to notice:
-Except for the first line, every line of the method is identical to the code I used to create
-the plain-vanilla function that we started with.
+```
+Things to notice:<br>
+1.Except for the first line, every line of the method is identical to the code I used to create
+the plain-vanilla function that we started with.<br>
 The method definition begins the same way a property definition begins, with the name
-followed by a colon.
-A comma ends every property definition and method definition except for the last
+followed by a colon.<br>
+2.A comma ends every property definition and method definition except for the last
 property or method. If you were to add a property or method below the calcAnnual
 method definition, you'd need to insert a comma after the closing curly bracket of the
-ca lcAnnual definition.
-T he parentheses that indicate that a variable name is the name of a function come
- immediately after the keyword function. Parameters, if there are any, go inside the
+calcAnnual definition.<br>
+3.The parentheses that indicate that a variable name is the name of a function come
+immediately after the keyword function. Parameters, if there are any, go inside the
 parens, as in any function definition.
-
+```
 1 var plan1 = {
 2 name: "Basic",
 3 price: 3.99,
@@ -137,13 +145,12 @@ parens, as in any function definition.
 18 return bestPrice * 12;
 19 }
 20 };
+```
 When you write this.whatever, JavaScript is smart enough to understand that you're
 referring to a property of the object that's being defined—in this case, plan1.
 
-72
-Objects:
-Constructors
-
+# 72 Objects: Constructors
+```
 1 var plan1 = {
 2 name: "Basic",
 3 price: 3.99,
@@ -151,8 +158,9 @@ Constructors
 5 transfer: 1000,
 6 pages: 10
 7 };
+```
 But that only gets us an object that represents the first plan
-
+```
 constructor function.
 1 function Plan(name, price, space, transfer, pages) {
 2 this.name = name;
@@ -161,7 +169,7 @@ constructor function.
 5 this.transfer = transfer;
 6 this.pages = pages;
 7 }
-
+```
 The function name is capitalized. JavaScript doesn't care whether you do this or not, but
 it's conventional to do it to distinguish constructor functions from regular functions.
 
@@ -169,21 +177,21 @@ Each of the parameter values is assigned to a variable. But the variable is a pr
 attached to some object whose name hasn't been specified yet. But don't worry. Just as the
 parameter values will be filled in by the calling code, so will the name of the object.
 This is the calling code that creates the object for the Basic plan.
+```
 var plan1 = new Plan("Basic", 3.99, 100, 1000, 10);
-
+```
 Now it's easy to mass-produce as many objects as you want, using the same pattern.
+```
 1 var plan1 = new Plan("Basic", 3.99, 100, 1000, 10);
 2 var plan2 = new Plan("Premium", 5.99, 500, 5000, 50);
 3 var plan3 = new Plan("Ultimate", 9.99, 2000, 20000, 500);
-
-73
-Objects:
-Constructors for methods
+```
+# 73 Objects: Constructors for methods
 
 When you attach a variable to an object, it's
 called a property of the object. When you attach a function to an object, it's called a method of
 the object. 
-
+```
 1 function Plan(name, price, space, transfer, pages, discountMonths) {
 2 this.name = name;
 3 this.price = price;
@@ -204,21 +212,20 @@ the object.
 18 return bestPrice * 12;
 19 };
 20 }
-Things to notice about line 8, the beginning of the method definition:
+```
+Things to notice about line 8, the beginning of the method definition:<br>
 Like the property definitions above it, the line begins with the keyword this, referring to
-the name of whatever object is being constructed at any given time.
+the name of whatever object is being constructed at any given time.<br>
 The next three pieces are the same: a dot, the name of the method, and an equal sign.
-The next piece is different: the keyword function.
+The next piece is different: the keyword function.<br>
 In this case, a single parameter is inside the parentheses, percentIfDisc. This is not a
 parameter that's part of the constructor. It's a parameter of the method that the constructor
 will create for each object. A value is passed to it not when a new object is created using
 the constructor, but when the method, having already been created along with its object
 via the constructor, is called.
 
-74
-Objects:
-Prototypes
-
+# 74 Objects: Prototypes
+```
 1 Plan.prototype.calcAnnual = function(percentIfDisc) {
 2 var bestPrice = this.price;
 3 var currDate = new Date();
@@ -231,42 +238,42 @@ Prototypes
 10 }
 11 return bestPrice * 12;
 12 };
+```
 Now, all objects created with the constructor Plan will share the same copy of the
-method calcAnnual. There's no unnecessary duplication.
-
-the name of the constructor function, in this case Plan
-the keyword prototype
+method calcAnnual. There's no unnecessary duplication.<br>
+the name of the constructor function, in this case Plan the keyword prototype
 the name of the method that all objects created with Plan will share, in this case
 calcAnnual
 
 Objects can have prototype properties as well as prototype methods. Suppose you wanted
 all objects created with the Plan to share the same property, cancellable, with a value of
 true. You'd code the prototype this way.
+```
 Plan.prototype.cancellable = true;
-
-75
-Objects:
-Checking for properties and methods
+```
+# 75 Objects: Checking for properties and methods
 
 var gotTheProperty = "price" in plan1;
 Here are the parts:
 the property in question, enclosed in quotes—in this case, price
 the keyword in
 the object, in this case, plan1
-
+```
 1 var listOfProperties = [];
 2 for (var prop in plan1) {
 3 listOfProperties.push(prop);
 4 }
+```
 Line 1 declares an empty array, listOfProperties. Lines 2-4 cycle through all the
 properties of plan1, adding each property (push), including any methods, to the array
 listOfProperties. Using the example we've been working with, the array
 listOfProperties winds up with a value of
 "name,price,space,transfer,pages,discountMonths,calcAnnual".
-
+```
 1 var listOfProperties = [];
 2 for (var prop in plan1) {
 3 if (plan1.hasOwnProperty(prop)) {
 4 listOfProperties.push(prop);
 5 }
 6 }
+```

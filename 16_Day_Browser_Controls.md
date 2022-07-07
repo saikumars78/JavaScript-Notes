@@ -8,12 +8,11 @@ This statement gets just the domain name.
 ```
 var theDomain = window.location.hostname;
 ```
-Get the path.
+To get the path.
 ```
 var thePath = window.location.pathname;
 ```
-As usual, you can reverse the order of things, telling the browser where to go instead of
-asking where it is.
+As usual, you can reverse the order of things, telling the browser where to go instead of asking where it is.
 ```
 window.location.href = "http://www.me.com/1.html";
 window.location.href = "http://www.me.com";
@@ -25,10 +24,8 @@ window.location.href = "http://www.me.com";
 3 window.location.href = destination;
 ```
 Here's the line-by-line breakdown:
-1. Gets the domain name and assigns it to the variable currentSite. Example:
-www.me.com
-2. Concatenates the string "http://" with the domain name plus the destination page and
-assigns the combo to the variable destination
+1. Gets the domain name and assigns it to the variable currentSite. Example: www.me.com
+2. Concatenates the string "http://" with the domain name plus the destination page and assigns the combo to the variable destination
 3. Directs the browser to the destination
 
 This is how to direct the browser to an anchor on the current page.
@@ -48,62 +45,63 @@ desired anchor and assigns the combo to the variable destination
 
 # 77 Browser control: Getting and setting the URL another way
 
-In the last chapter you learned to direct the browser to a new URLby assigning a string to
-window.location.href. Here's another way to do the same thing.
+In the last chapter you learned to direct the browser to a new URLby assigning a string to window.location.href. Here's another way to do the same thing.
+```
 window.location.assign("http://www.me.com");
+```
 The statement directs the browser to the home page of me.com.
 As with the window.location.href statement, you can make the URL as detailed as you
 like.
+```
 window.location.assign("http://www.me.com/lojack.html#guarantee");
-The statement directs the browser to the anchor #guarantee on the lojack.html page of the
-site me.com.
+```
+The statement directs the browser to the anchor #guarantee on the lojack.html page of the site me.com.
 Here's another alternative that has a slightly different effect.
+```
 window.location.replace("http://www.me.com/lojack.html#guarantee");
-Once again, the statement directs the browser to a new URL. But by using replace
-instead of assign, you interfere with the browser history. When you use assign, the history is
-intact. The statement takes the user away from the original page, to the new page. If, after
-arriving at the new page, she presses the Backspace key or clicks the browser's back button,
-she goes back to the original page that she just came from. But when you use replace, the
-original page doesn't make it into the history. If the user presses Backspace after being taken
-to the new page, she's taken to the page that displayed before the original page since the
-original page is no longer in the history. If there is no page before the original page, nothing
-happens when she presses Backspace.
+```
+Once again, the statement directs the browser to a new URL. But by using replace instead of assign, you interfere with the browser history. When you use assign, the history is intact. The statement takes the user away from the original page, to the new page. If, afterarriving at the new page, she presses the Backspace key or clicks the browser's back button she goes back to the original page that she just came from. But when you use replace, the original page doesn't make it into the history. If the user presses Backspace after being taken to the new page, she's taken to the page that displayed before the original page since the original page is no longer in the history. If there is no page before the original page, nothing happens when she presses Backspace.
 
 To reload the current page code one of these statements:
+```
 window.location.reload(true);
 window.location.reload(false);
 window.location.reload();
-
-78
-Browser control:
-Forward and reverse
+```
+# 78 Browser control: Forward and reverse
 You can make the browser go back one URL in the browser history, as if the user has
 pressed the Backspace key or clicked the browser's back button.
+```
 history.back();
-To make the browser go forward in the history, as if the user has pressed alt-right-arrow
-or clicked the browser's forward button...
+```
+To make the browser go forward in the history, as if the user has pressed alt-right-arrow or clicked the browser's forward button...
+```
 history.forward();
-
+```
 You can tell the browser how many steps in the history you want to take, using negative
 numbers to go back and positive numbers to go forward. The following statement is the
 equivalent of pressing the Backspace key three times.
+```
 history.go(-3);
+```
 The following statement sends the browser forward two URLs.
+```
 history.go(2);
-
-79
-Browser control:
+```
+# 79 Browser control:
 Filling the window with contentvar monkeyWindow = window.open();
 The code above opens a blank window of maximum size and gives it a handle, a variable
 that refers to this particular window
 
 There are three ways to fill a new window with content, You can use the write method to
 put HTML content on the screen...
+```
 1 var monkeyWindow = window.open();
 2 var windowContent = "<h1>Capuchin monkey</h1><img src= 'monkey.jpg'><p>The word capuchin derives from a
 group of friars<br>named the Order of Friars Minor Capuchin who wear<br>brown
 robes with large hoods covering their heads.</p>";
 3 monkeyWindow.document.write(windowContent);
+```
 Here's the line-by-line breakdown:
 1. Opens a new window and assigns it the handle monkeyWindow
 2. Assigns text to the variable windowContent
